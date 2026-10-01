@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go and Tell (BASS) - Download Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .header-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-title p {
+            font-size: 14px;
+            color: #4a5568;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .header-title h1 {
+            font-size: 32px;
+            color: #1a202c;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 25px;
+            max-width: 850px;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+            min-width: 280px;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-container {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .mp3-card h2 { color: #2b6cb0; }
+        .mp3-card .download-btn {
+            background: #3182ce;
+            box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+        }
+        .mp3-card .download-btn:hover { background: #2b6cb0; }
+
+        .mp4-card h2 { color: #b83280; }
+        .mp4-card .download-btn {
+            background: #d63f8a;
+            box-shadow: 0 4px 12px rgba(214, 63, 138, 0.3);
+        }
+        .mp4-card .download-btn:hover { background: #b83280; }
+
+        h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #4a5568;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            max-width: 560px;
+            margin: 40px auto 10px auto;
+            padding: 0 15px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .yt-app-btn:active {
+            transform: scale(0.95);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #4a5568;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .txt {
+            animation: randomBlink 1s linear infinite;
+            margin-top: 15px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        @keyframes randomBlink {
+            0%   { opacity: 1; color: #e53e3e; }
+            16%  { opacity: 0; }
+            33%  { opacity: 1; color: #38a169; }
+            49%  { opacity: 0; }
+            66%  { opacity: 1; color: #3182ce; }
+            82%  { opacity: 0; }
+            100% { opacity: 1; color: #e53e3e; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-title">
+        <p>Christian Song (Bass Vocal)</p>
+        <h1>Go and Tell</h1>
+    </div>
+
+    <div class="cards-container">
+        
+        <!-- MP3 CARD -->
+        <div class="card mp3-card">
+            <div>
+                <div class="icon-container">🎵</div>
+                <h2>MP3 Audio</h2>
+                <p class="description">I-download ang audio na bersyon para sa pakikinig o pagpa-practice ng kanta kahit walang internet.</p>
+            </div>
+            <a href="Go_and_Tell_BASS.mp3" class="download-btn" download="Go_and_Tell_BASS.mp3">
+                📥 I-download ang MP3
+            </a>
+        </div>
+
+        <!-- MP4 CARD -->
+        <div class="card mp4-card">
+            <div>
+                <div class="icon-container">🎥</div>
+                <h2>MP4 Video</h2>
+                <p class="description">I-download ang buong video na bersyon na may kasamang lyrics o visual guide.</p>
+            </div>
+            <a href="Go_And_Tell_BASS.mp4" class="download-btn" download="Go_And_Tell_BASS.mp4">
+                📥 I-download ang MP4
+            </a>
+        </div>
+        
+    </div>
+
+    <!-- VIDEO SECTION -->
+    <div class="video-wrapper">
+        <div class="video-container">
+            <iframe 
+                src="https://youtube.com" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- NALAGAY NA PO DITO ANG DIRETSONG BUTTON SA APP -->
+    <div style="text-align: center; margin: 0 auto 30px auto;">
+        <a href="https://youtu.be/nob7akpaC98?si=9BTa6CG-EQHxBN8D" class="yt-app-btn" target="_blank" style="
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff0000;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+            text-align: center;
+        ">
+            🔺 Panoorin Direk sa YouTube App
+        </a>
+    </div>
+
+    <div class="footer">
+        Inihanda para sa mga kapatid kay Kristo.
+    </div>
+    <br><br>
+    <!-- DITO NAGSISIMULA ANG CSS (Estilo at Animation) -->
+<style>
+  /* Container para magkatabi ang kamay at text */
+  .link-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  /* Code para sa gumagalaw na kamay */
+  .pointing-hand {
+    font-size: 24px;
+    /* Pinapagalaw nito ang kamay pabalik-balik */
+    animation: ituro 0.6s infinite alternate; 
+  }
+
+  /* Ang mismong galaw ng kamay (pakanan at pakaliwa) */
+  @keyframes ituro {
+    from { transform: translateX(0); }
+    to { transform: translateX(10px); }
+  }
+
+  /* Estilo ng link para maging mukhang clickable talaga */
+  .clickable-link {
+    color: #0000ee; /* Kulay blue */
+    text-decoration: underline; /* May salungguhit para halatang link */
+    font-weight: bold;
+  }
+</style>
+<!-- DITO NAGTATAPOS ANG CSS -->
+
+
+<!-- DITO NAGSISIMULA ANG CSS (Estilo at Animation) -->
+<style>
+  /* Container para mai-center ang kamay at ang link */
+  .center-link-container {
+    display: flex;
+    flex-direction: column; /* Pinagpapatong ang kamay at text */
+    align-items: center;    /* Inilalagay sa mismong gitna (center) */
+    justify-content: center;
+    text-align: center;
+    margin: 25px 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Code para sa kamay na nakaturo pababa */
+  .pointing-down-hand {
+    font-size: 32px; /* Nilakihan nang kaunti para mas madaling makita */
+    margin-bottom: 5px;
+    /* Pinapagalaw nito ang kamay pataas at pababa */
+    animation: ituroPababa 0.5s infinite alternate;
+  }
+
+  /* Ang mismong galaw ng kamay (pataas at pababa) */
+  @keyframes ituroPababa {
+    from { transform: translateY(0); }
+    to { transform: translateY(8px); } /* Bababa ng 8 pixels */
+  }
+
+  /* Estilo ng link para maging malinaw na blue text */
+  .clickable-link {
+    color: #0000ee; /* Kulay blue */
+    text-decoration: underline; /* May salungguhit para halatang link */
+    font-size: 20px; /* Mas pinalaki para malinaw sa mga matatanda */
+    font-weight: bold;
+  }
+
+  /* Effect kapag itinapat ang mouse ng computer */
+  .clickable-link:hover {
+    color: #0000aa; /* Medyo magdidilim ang blue kapag itinapat ang mouse */
+  }
+</style>
+<!-- DITO NAGTATAPOS ANG CSS -->
+
+
+<!-- DITO NAMAN ANG HTML (Ang makikita sa webpage) -->
+<div class="center-link-container">
+  <!-- Ang kamay na nakaturo pababa (👇) -->
+  <span class="pointing-down-hand">👇</span>
+  
+  <!-- Ang mismong clickable sentence link sa baba nito -->
+  <a href="https://youtu.be/nob7akpaC98?si=IiT5kvJd2bRNt_Qi" target="_blank" class="clickable-link">
+    Pindutin dito para mapanood ang video
+  </a>
+</div>
+
+    <!-- DITO NAGSISIMULA ANG CSS (Estilo at Animation) -->
+<style>
+  /* Container para mai-center ang kamay at ang button */
+  .center-button-container {
+    display: flex;
+    flex-direction: column; /* Pinagpapatong ang kamay at button */
+    align-items: center;    /* Inilalagay sa mismong gitna */
+    justify-content: center;
+    text-align: center;
+    margin: 30px 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Code para sa kamay na nakaturo pababa */
+  .pointing-down-hand {
+    font-size: 32px;
+    margin-bottom: 8px;
+    /* Pinapagalaw ang kamay pataas at pababa */
+    animation: ituroPababa 0.5s infinite alternate;
+  }
+
+  /* Animation ng galaw ng kamay */
+  @keyframes ituroPababa {
+    from { transform: translateY(0); }
+    to { transform: translateY(8px); }
+  }
+
+  /* Estilo para sa mismong Button */
+  .video-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #007bff; /* Kulay blue */
+    color: white !important;   /* Puting text para madaling basahin */
+    text-decoration: none;     /* Tinanggal ang salungguhit ng link */
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 6px;        /* Medyo pabilog ang mga kanto */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* May konting anino sa ilalim */
+    text-transform: uppercase; /* Gagawing CAPITAL LETTERS ang text */
+    
+    /* Animation para sa buong button (lumalaki at lumiliit) */
+    animation: attentionPulse 1.5s infinite;
+    transition: background-color 0.2s;
+  }
+
+  /* Animation na nagpapalaki at nagpapaliit sa button para kumuha ng atensyon */
+  @keyframes attentionPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.04); box-shadow: 0 6px 12px rgba(0,123,255,0.4); }
+    100% { transform: scale(1); }
+  }
+
+  /* Pagbabago ng kulay kapag itinapat ang mouse (Hover effect) */
+  .video-btn:hover {
+    background-color: #0056b3; /* Mas madilim na blue kapag itinapat ang mouse */
+    cursor: pointer;           /* Lalabas ang cursor na hugis kamay sa computer */
+  }
+</style>
+<!-- DITO NAGTATAPOS ANG CSS -->
+
+
+<!-- DITO NAMAN ANG HTML (Ang makikita sa iyong webpage) -->
+<div class="center-button-container">
+  <!-- Ang kamay sa itaas na nakaturo pababa -->
+  <span class="pointing-down-hand">👇</span>
+  
+  <!-- Ang mismong gumagalaw na button sa ilalim -->
+  <a href="https://youtu.be/nob7akpaC98?si=IiT5kvJd2bRNt_Qi" target="_blank" class="video-btn">
+    Pindutin Dito Para Mapanood ang Video
+  </a>
+</div>
+
+
+    <br>
+    <h1 class="txt">By: VANNI</h1>
+    
+</body>
+</html>
